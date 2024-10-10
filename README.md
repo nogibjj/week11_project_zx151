@@ -1,38 +1,32 @@
-# SQLite Project | Data Ingestion, Transformation, Querying, and CRUD Operations
+# SQLite Project | Data Ingestion and Management
 
-This project demonstrates a robust data pipeline leveraging SQLite, which encompasses the processes of data ingestion, transformation, querying, and executing CRUD (Create, Read, Update, Delete) operations. The project is designed to support Continuous Integration and Continuous Deployment (CI/CD) pipelines, automating various database operations with every commit to the repository. Furthermore, it provides the capability to run queries through a command line interface (CLI), offering optional output to facilitate efficient data analysis and management.
+This project showcases a data pipeline using SQLite, focusing on data loading, transformation, querying, and CRUD (Create, Read, Update, Delete) operations. It integrates Continuous Integration and Continuous Deployment (CI/CD) pipelines to automate database tasks with each repository update. Additionally, it supports command line execution of SQL queries with optional output for data analysis.
 
-## Key Features
+## Features
 
-- Import data from external sources into an SQLite database.
-- Cleanse and transform data for insightful analysis.
-- Execute SQL queries to derive data insights.
-- Carry out CRUD operations on database entries.
-- Automate data pipeline tasks with CI/CD integration.
+- Import data into an SQLite database.
+- Clean and transform data.
+- Execute SQL queries for analysis.
+- Perform CRUD operations.
+- Automated CI/CD integration.
 
-## How to Use
+## Usage
 
-### Running the Data Pipeline
+### Running the Pipeline
 
-To initiate the data pipeline, follow these steps:
-
-1. Clone this repository to your local machine.
+1. Clone the repository.
 2. Navigate to the project directory.
-3. Execute the data pipeline using the `main.py` script, optionally appending the `--query` flag on the command line as necessary.
+3. Run the pipeline using `main.py`, optionally with the `--query` flag.
 
-### Running Queries
+### Executing Queries
 
-This project allows users to execute SQL queries and view the resulting data. You can include the `--query` flag followed by your SQL statement to display the query results in the output.
+You can run SQL queries using the `--query` flag followed by your SQL statement to display results.
 
-This command will execute your specified SQL query and show the corresponding results.
+## CI/CD
 
-## CI/CD Integration
+The project automatically performs the following actions on each push:
 
-This project is set up with Continuous Integration and Continuous Deployment (CI/CD) pipelines. Upon each push to the repository, the following actions are automatically carried out:
-
-1. Data is loaded into the SQLite database.
-2. Data transformation and cleansing processes are conducted.
-3. SQL queries are executed.
-4. The output of these operations is logged.
-
-The results of the operations, including any query results and CRUD actions, are automatically documented in an `output.txt` file for later reference.
+1. Data loading into SQLite.
+2. Data transformation.
+3. SQL query execution.
+4. Output logging in `output.txt`.
