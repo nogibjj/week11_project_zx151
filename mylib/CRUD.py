@@ -27,12 +27,12 @@ def create(general_name, count_products,
     conn = sqlite3.connect("GroceryDB.db")
     cursor = conn.cursor()
     cursor.execute("SELECT COUNT(*) FROM GroceryDB")
-    id = cursor.fetchone()[0] + 1
+    item_id = cursor.fetchone()[0] + 1
     cursor.execute("""INSERT INTO GroceryDB (id, general_name, count_products,
                     ingred_FPro, avg_FPro_products, avg_distance_root, 
                    ingred_normalization_term, semantic_tree_name,
                     semantic_tree_node) VALUES (?, ?, ?, ?, ?, ?, ?, ?,
-                    ?)""", (id, general_name, count_products, ingred_FPro,
+                    ?)""", (item_id, general_name, count_products, ingred_FPro,
                              avg_FPro_products, avg_distance_root,
                                ingred_normalization_term, semantic_tree_name,
                                  semantic_tree_node))
@@ -52,7 +52,7 @@ def read():
         print(row)
 
 
-def update(id, general_name,
+def update(item_id, general_name,
             count_products, ingred_FPro,
               avg_FPro_products, avg_distance_root,
                 ingred_normalization_term, semantic_tree_name,
@@ -68,15 +68,15 @@ def update(id, general_name,
                       (general_name, count_products,
                         ingred_FPro, avg_FPro_products,
                           avg_distance_root, ingred_normalization_term,
-                            semantic_tree_name, semantic_tree_node, id))
+                            semantic_tree_name, semantic_tree_node, item_id))
     conn.commit()
     conn.close()
 
-def delete(id):
+def delete(item_id):
     """Delete an item from the GroceryDB table"""
     conn = sqlite3.connect("GroceryDB.db")
     cursor = conn.cursor()
-    cursor.execute("DELETE FROM GroceryDB WHERE id=?", (id,))
+    cursor.execute("DELETE FROM GroceryDB WHERE id=?", (item_id,))
     deleted_rows = cursor.rowcount
     conn.commit()
     conn.close()
@@ -98,7 +98,6 @@ def get_database_dimensions():
 
 
 if __name__ == "__main__":
-    create_table()
     create_table()
     create("Eggs", 10, 0.5, 0.2, 0.1, 0.3, "Tree1", "Node1")
     last_id = get_database_dimensions()[0]
