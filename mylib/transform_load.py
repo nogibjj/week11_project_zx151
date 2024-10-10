@@ -63,6 +63,10 @@ def load(dataset="/workspaces/Osama-sqlite-lab/data/GroceryDB_IgFPro.csv"):
         print(f"SQLite error: {e}")
         return None
     
-    except Exception as e:
-        print(f"An error occurred: {e}")
+    except ValueError as e:
+        print(f"ValueError encountered: {e}")
+        return None
+    
+    except OSError as e:
+        print(f"OS error: {e}")
         return None
