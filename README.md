@@ -1,5 +1,5 @@
 # SQLite Project | Data Ingestion and Management
-
+[![CI](https://github.com/nogibjj/zihan_sql_1/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/zihan_sql_1/actions/workflows/cicd.yml)  
 This project showcases a data pipeline using SQLite, focusing on data loading, transformation, querying, and CRUD (Create, Read, Update, Delete) operations. It integrates Continuous Integration and Continuous Deployment (CI/CD) pipelines to automate database tasks with each repository update. Additionally, it supports command line execution of SQL queries with optional output for data analysis.
 
 ## Features
