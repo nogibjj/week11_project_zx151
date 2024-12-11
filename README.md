@@ -32,6 +32,8 @@ This project demonstrates the creation and execution of a data pipeline using Da
 2. Install libraries via PyPI
 3. Follow the prompts to complete the installation.
 
+![install library](屏幕截图%202024-12-10%20205109.png)
+
 ### Linking GitHub to Databricks
 1. Go to **Account Settings** (profile icon in the top-right corner).
 2. Navigate to **Linked Accounts**.
@@ -67,6 +69,8 @@ This project demonstrates the creation and execution of a data pipeline using Da
 2. Monitor the execution of each task to ensure sequential processing.
 
 ![Run the workflow](屏幕截图%202024-12-10%20204916.png)
+![workflow](屏幕截图%202024-12-10%20204940.png)
+
 
 ### Executing Queries
 - Use the `query.py` script to run SQL queries.
