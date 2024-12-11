@@ -66,6 +66,8 @@ This project demonstrates the creation and execution of a data pipeline using Da
 1. After configuring the workflow, navigate to **Workflows** and trigger the pipeline.
 2. Monitor the execution of each task to ensure sequential processing.
 
+![Run the workflow](屏幕截图%202024-12-10%20204916.png)
+
 ### Executing Queries
 - Use the `query.py` script to run SQL queries.
 - For example:
